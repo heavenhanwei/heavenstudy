@@ -1,0 +1,14 @@
+import re
+
+f = open('regex_sum_207140.txt')
+sum_text = re.findall('[0-9]+', f.read())
+sum_text_int = map(int,sum_text)
+sumnum = 0
+
+for line  in range(len(sum_text)):
+	sumnum += sum_text_int[line]
+	line = line + 1
+
+print sum_text
+print sumnum
+f.close()

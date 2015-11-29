@@ -1,0 +1,12 @@
+PODS:
+  - PLCameraStreamingKit (1.4.12):
+    - PLCameraStreamingKit/precompiled (= 1.4.12)
+  - PLCameraStreamingKit/precompiled (1.4.12)
+
+DEPENDENCIES:
+  - PLCameraStreamingKit
+
+SPEC CHECKSUMS:
+  PLCameraStreamingKit: 7f6405982378c2ccecf77ccdcef2423cc3f68203
+
+COCOAPODS: 0.39.0
