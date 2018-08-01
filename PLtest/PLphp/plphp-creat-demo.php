@@ -22,6 +22,8 @@ try {
     
     $stream = $hub->createStream($title, $publishKey, $publishSecurity); # => Stream Object
     
+    
+    /*
     echo "createStream() =>\n";
     var_export($stream);
     echo "\n\n";
@@ -40,15 +42,36 @@ try {
     echo $stream->hosts["live"]["http"];
     echo $stream->hosts["playback"]["http"];
     */
+
 } catch (Exception $e) {
     echo 'createStream() failed. Caught exception: ',  $e->getMessage(), "\n";
 }
 
 
+try {
+    $streamId = $stream->id;
+    $stream = $hub->getStream($streamId); # => 获得 Stream 对象
+    /*
+    echo "getStream() =>\n"; # => 打印stream信息
+    var_export($stream);
+    echo "\n\n";
+    */
+} catch (Exception $e) {
+    echo "getStream() failed. Caught exception: ",  $e->getMessage(), "\n";
+}
+
+
+$publishUrl = $stream->rtmpPublishUrl();
+echo "Stream rtmpPublishUrl() =>\n";
+echo $publishUrl;
+echo "\n\n";
+
 $result = $stream->toJSONString(); # => string
 echo "Stream toJSONString() =>\n";
 var_export($result);
 echo "\n\n";
+
+
 
 ?>
 

@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import <PLCameraStreamingKit/PLCameraStreamingKit.h>
 
 @interface DetailViewController ()
 
@@ -34,8 +35,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    void (^permissionBlock)(void) = ^{ /* 下一步我们就添加这部分的代码 */};
+    void (^noPermissionBlock)(void) = ^{ /* 处理未授权情况 */};
+    
+    // 检查摄像头是否有授权
+    PLAuthorizationStatus status = [PLCameraStreamingSession cameraAuthorizationStatus];
+    
+    if (PLAuthorizationStatusNotDetermined == status) {
+        [PLCameraStreamingSession requestCameraAccessWithCompletionHandler:^(BOOL granted) {
+            // 回调确保在主线程，可以安全对 UI 做操作
+            granted ? permissionBlock() : noPermissionBlock();
+        }];
+    } else if (PLAuthorizationStatusAuthorized == status) {
+        permissionBlock();
+    } else {
+        noPermissionBlock();
+    }
     [self configureView];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,4 +61,5 @@
     // Dispose of any resources that can be recreated.
 }
 
+        
 @end

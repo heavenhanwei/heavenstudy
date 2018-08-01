@@ -16,6 +16,8 @@
 		4D09FC2E1BF1F3B500A26C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D09FC2C1BF1F3B500A26C24 /* LaunchScreen.storyboard */; };
 		4D09FC391BF1F3B600A26C24 /* PLtestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D09FC381BF1F3B600A26C24 /* PLtestTests.m */; };
 		4D09FC441BF1F3B600A26C24 /* PLtestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D09FC431BF1F3B600A26C24 /* PLtestUITests.m */; };
+		4D3BAFCF1C58ADDF009B680A /* PILIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D3BAFCD1C58ADDF009B680A /* PILIViewController.m */; };
+		4D3BAFD01C58ADDF009B680A /* PILIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3BAFCE1C58ADDF009B680A /* PILIViewController.xib */; };
 		69D306EBAC6363CCCFA198AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD43B71254D746C3057BFC2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,9 @@
 		4D09FC3F1BF1F3B600A26C24 /* PLtestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PLtestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D09FC431BF1F3B600A26C24 /* PLtestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLtestUITests.m; sourceTree = "<group>"; };
 		4D09FC451BF1F3B600A26C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D3BAFCC1C58ADDF009B680A /* PILIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PILIViewController.h; sourceTree = "<group>"; };
+		4D3BAFCD1C58ADDF009B680A /* PILIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PILIViewController.m; sourceTree = "<group>"; };
+		4D3BAFCE1C58ADDF009B680A /* PILIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PILIViewController.xib; sourceTree = "<group>"; };
 		576FA353766BEE14A8F09AB7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6CD43B71254D746C3057BFC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +131,9 @@
 				4D09FC221BF1F3B500A26C24 /* MasterViewController.m */,
 				4D09FC241BF1F3B500A26C24 /* DetailViewController.h */,
 				4D09FC251BF1F3B500A26C24 /* DetailViewController.m */,
+				4D3BAFCC1C58ADDF009B680A /* PILIViewController.h */,
+				4D3BAFCD1C58ADDF009B680A /* PILIViewController.m */,
+				4D3BAFCE1C58ADDF009B680A /* PILIViewController.xib */,
 				4D09FC271BF1F3B500A26C24 /* Main.storyboard */,
 				4D09FC2A1BF1F3B500A26C24 /* Assets.xcassets */,
 				4D09FC2C1BF1F3B500A26C24 /* LaunchScreen.storyboard */,
@@ -275,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3BAFD01C58ADDF009B680A /* PILIViewController.xib in Resources */,
 				4D09FC2E1BF1F3B500A26C24 /* LaunchScreen.storyboard in Resources */,
 				4D09FC2B1BF1F3B500A26C24 /* Assets.xcassets in Resources */,
 				4D09FC291BF1F3B500A26C24 /* Main.storyboard in Resources */,
@@ -354,6 +363,7 @@
 				4D09FC231BF1F3B500A26C24 /* MasterViewController.m in Sources */,
 				4D09FC1D1BF1F3B500A26C24 /* main.m in Sources */,
 				4D09FC261BF1F3B500A26C24 /* DetailViewController.m in Sources */,
+				4D3BAFCF1C58ADDF009B680A /* PILIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,4 +27,16 @@ func main() {
 	    fmt.Println("Error:", err)
 	}
 	fmt.Println("CreateStream:\n", stream)
+
+	//生成stream Publishurl
+	url := stream.RtmpPublishUrl()
+	fmt.Println("Stream RtmpPublishUrl:\n", url)
+
+	//生成streamJson
+	streamJson, err := stream.ToJSONString()
+	if err != nil {
+    fmt.Println("Error:", err)
+	}
+	fmt.Println("Stream ToJSONString:\n", streamJson)
 }
+
