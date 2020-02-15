@@ -1,0 +1,54 @@
+openapi: 3.0.1
+info:
+    title: yitu speech musicidentify api ref
+    version: 0.0.1
+    description: 依图歌曲识别的API。
+    contact:
+        email: wei.han@yitu-inc.com
+    
+
+paths:
+    /v1/musicidentify/streamscan:
+        headerpameters:
+            - $ref: '#/components/headerpameters/x-dev-id'
+            - $ref: '#/components/headerpameters/x-signature'
+            - $ref: '#/components/headerpameters/x-request-send-timestamp'
+        post:
+            porperty
+    /v1/musicidentify/streamquery:
+    /v1/musicidentify/streamstop:
+    /v1/musicidentify/filescan:
+    /v1/musicidentify/filequery:
+    
+
+components:
+    headerpameters:
+    
+
+schemas:
+    CommonResponse:
+        type: object
+        required:
+        - rtn
+        - message
+        - requestId
+        porperty:
+            rtn:
+                type: integer
+                description: 请求处理结果的错误代码  0表示OK，否则表示异常。
+            message:
+                type: string
+                description: 请求处理结果的debug信息
+            requestId:
+                type: string
+                description: 请求的唯一标示符。
+    streamscanRequest:
+    streamscanResponse:
+    streamscanCallback:
+    streamqueryRequest:
+    streamqueryResponse:
+    streamstopRequest:
+    streamstopResponse:
+
+
+
